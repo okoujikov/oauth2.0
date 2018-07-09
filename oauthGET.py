@@ -1,17 +1,28 @@
 import requests
 
+# URL = "https://drchrono.com/"
+
 
 app = Foo(__name__) # Foo is the client's application
 app.secret_key = os.environ.get("secret_key") or os.urandom(20) # this line accesses an environment variable using os.environ or it generates a secret_key randomly
 # QUESTION: where does secret_key come from?
 
 
-drchrono_auth = DrChronoClient(
+drchrono_auth = DrChronoClient( #TODO: define DrChronoClient in a seperate file
     client_id = ("sny2QrTbzRdPR5KiAq252KgcWU0fO22QRdh7wNUJ"), # QUESTION: do I need parenthesis here? also did I spell parenthesis correctly first try?
     client_secret = "I9baXj5l4I4dzCUgXMqgZsOUrxq2wm2GurggEGbzNKweiRIe5LwcefWvK7TlUHhSDgOHYtGRi1tmvczN3uCjf2TOb2YW7202Fhbf1A5iG6azQiWnDbFY3Xb8VghUpMvj",
     redirect_uri = "http://localhost:8080/complete/drchrono/",
 )
 
+
+# For now DrChronoClient() exists here
+# TODO: complete DrChronoClient(). Outline taken from services.py
+class DrChronoClient(OAuth2):
+    site = "https://accounts.google.com"
+    authorization_url = "/o/oauth2/auth"
+    token_url = "/o/oauth2/token"
+    scope_sep = " "
+#-------------------------------------
 
 @app.route("/")
 def index():
