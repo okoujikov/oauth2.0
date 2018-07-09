@@ -1,7 +1,5 @@
 import requests
 
-# URL = "https://drchrono.com/"
-
 
 app = Foo(__name__) # Foo is the client's application
 app.secret_key = os.environ.get("secret_key") or os.urandom(20) # this line accesses an environment variable using os.environ or it generates a secret_key randomly
