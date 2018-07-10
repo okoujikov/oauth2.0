@@ -9,7 +9,7 @@ app.secret_key = os.environ.get("secret_key") or os.urandom(20) # this line acce
 
 
 drchrono_auth = DrChronoClient( #TODO: define DrChronoClient in a seperate file
-    client_id = ("sny2QrTbzRdPR5KiAq252KgcWU0fO22QRdh7wNUJ"), # QUESTION: do I need parenthesis here? also did I spell parenthesis correctly first try?
+    client_id = ("sny2QrTbzRdPR5KiAq252KgcWU0fO22QRdh7wNUJ"), # QUESTION: do I need parentheses here?
     client_secret = "I9baXj5l4I4dzCUgXMqgZsOUrxq2wm2GurggEGbzNKweiRIe5LwcefWvK7TlUHhSDgOHYtGRi1tmvczN3uCjf2TOb2YW7202Fhbf1A5iG6azQiWnDbFY3Xb8VghUpMvj",
     redirect_uri = "http://localhost:8080/complete/drchrono/",
 )
