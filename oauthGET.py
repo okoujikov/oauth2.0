@@ -18,8 +18,8 @@ app = Flask(__name__) # initialize Flask
 
 
 drchrono_auth = DrChronoClient( # passing in client_id, client_secret, redirect_uri
-    client_id = os.getenv('CLIENT_ID'), #export CLIENT_ID=sny2QrTbzRdPR5KiAq252KgcWU0fO22QRdh7wNUJ
-    client_secret = os.getenv('CLIENT_SECRET'), #export CLIENT_SECRET=I9baXj5l4I4dzCUgXMqgZsOUrxq2wm2GurggEGbzNKweiRIe5LwcefWvK7TlUHhSDgOHYtGRi1tmvczN3uCjf2TOb2YW7202Fhbf1A5iG6azQiWnDbFY3Xb8VghUpMvj
+    client_id = os.getenv('CLIENT_ID'),
+    client_secret = os.getenv('CLIENT_SECRET'),
     redirect_uri = "http://localhost:5000/drchrono/oauth2callback",
 )
 
