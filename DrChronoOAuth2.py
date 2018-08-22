@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from services import DrChronoClient
 from apiEndpoints import AppointmentEndpoint
@@ -27,8 +28,9 @@ def drchrono_index():
     if not session.get("access_token"): # if there is no access token then client is redirected to /drchrono/login
         return redirect("/drchrono/login")
     # if the access token is available, we use it to access the Appointment Endpoint
-    api = AppointmentEndpoint(session.get('access_token'))
-    data = api.list(date="2018-07-20")
+    api = AppointmentEndpoint(session.get('access_token')) # api is set to the appointment endpoint using the access token
+    date = datetime.date.today() # gets the date currently
+    data = api.list(date=date) # gets a list of appointments using the date as a keyword argument
     return str(list(data)) # returns appointment data from the given date
 
 @app.route("/drchrono/login") # start the login process
