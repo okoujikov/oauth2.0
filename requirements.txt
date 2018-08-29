@@ -1,1 +1,22 @@
-# TODO: do it
+# Python version >= 2.7
+# Libraries Requirements:
+# certifi==2018.4.16
+# chardet==3.0.4
+# click==6.7
+# DateTime==4.2
+# Flask==1.0.2
+# httplib2==0.11.3
+# idna==2.7
+# itsdangerous==0.24
+# Jinja2==2.10
+# MarkupSafe==1.0
+# oauth2==1.9.0.post1
+# requests==2.19.1
+# requests-oauth2==0.3.0
+# six==1.11.0
+# urllib3==1.23
+# Werkzeug==0.14.1
+
+# Create appointments in your DrChrono account for DrChronoOAuth2.py to run
+# Name your application in line 18 when initializing Flask
+# Make sure Redirect URI is correct as well as Client ID and Client Secret
